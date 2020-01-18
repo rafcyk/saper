@@ -3,7 +3,6 @@ const smallSize = document.querySelector('label.smallSize input');
 const midSize = document.querySelector('label.midSize input');
 const bigSize = document.querySelector('label.bigSize input');
 const container = document.querySelector('div.container');
-const divHide = document.querySelector('div.hide');
 const divLoose = document.querySelector('div.loose');
 const divWin = document.querySelector('div.win');
 const winGame = document.querySelector('div.results p.winGame span');
@@ -22,9 +21,9 @@ const smallFn = ()=> {
 
     container.className = 'container small';
 
-    divHide.style.zIndex =-1;
     divLoose.style.display = 'none';
     divWin.style.display = 'none';
+    
 
     while(container.firstChild) container.removeChild(container.firstChild);
 
@@ -39,6 +38,7 @@ const smallFn = ()=> {
             container.appendChild(square);
             //add squares to array
             squaresTab[i][j] = square;
+            square.style.pointerEvents = 'auto';
         }
     }
 
@@ -273,10 +273,15 @@ const smallFn = ()=> {
         
         if(square.classList.contains('badSquare')){
             square.style.fontSize = 0 + 'px';
-            divHide.style.zIndex = 999;
             divLoose.style.display = 'block';
             countLooseGame++;
             looseGame.textContent = countLooseGame;
+
+            squaresTab.forEach((squareRow, indexFirst) => {
+                squareRow.forEach((square, indexSecond) => {
+            square.style.pointerEvents = 'none';
+                })
+            })
         }
 
         if(square.id == "hide"){
@@ -304,6 +309,12 @@ const smallFn = ()=> {
             divWin.style.display = 'block';
             countWinGame++;
             winGame.textContent = countWinGame;
+
+            squaresTab.forEach((squareRow, indexFirst) => {
+                squareRow.forEach((square, indexSecond) => {
+            square.style.pointerEvents = 'none';
+                })
+            })
         }
 
         square.id = "";
@@ -320,7 +331,6 @@ const midlFn = ()=> {
     container.className = 'container mid';
     midWin = 381;
 
-    divHide.style.zIndex =-1;
     divLoose.style.display = 'none';
     divWin.style.display = 'none';
 
@@ -337,6 +347,7 @@ const midlFn = ()=> {
             container.appendChild(square);
             //add squares to array
             squaresTab[i][j] = square;
+            square.style.pointerEvents = 'auto';
         }
     }
 
@@ -575,10 +586,15 @@ const midlFn = ()=> {
         if(square.classList.contains('badSquare')){
             
             square.style.fontSize = 0 + 'px';
-            divHide.style.zIndex = 999;
             divLoose.style.display = 'block';
             countLooseGame++;
             looseGame.textContent = countLooseGame;
+
+            squaresTab.forEach((squareRow, indexFirst) => {
+                squareRow.forEach((square, indexSecond) => {
+            square.style.pointerEvents = 'none';
+                })
+            })
         }
 
         if(square.textContent == 0 && square.classList.contains('goodSquare')){
@@ -605,6 +621,12 @@ const midlFn = ()=> {
             divWin.style.display = 'block';
             countWinGame++;
             winGame.textContent = countWinGame;
+
+            squaresTab.forEach((squareRow, indexFirst) => {
+                squareRow.forEach((square, indexSecond) => {
+            square.style.pointerEvents = 'none';
+                })
+            })
         }
 
         square.id = "";
@@ -622,7 +644,6 @@ const bigFn = ()=> {
     container.className = 'container big';
     squaresTab = [];
 
-    divHide.style.zIndex =-1;
     divLoose.style.display = 'none';
     divWin.style.display = 'none';
     bigWin = 871;
@@ -640,6 +661,7 @@ const bigFn = ()=> {
             container.appendChild(square);
             //add squares to array
             squaresTab[i][j] = square;
+            square.style.pointerEvents = 'auto';
         }
     }
 
@@ -878,10 +900,15 @@ const bigFn = ()=> {
         
         if(square.classList.contains('badSquare')){
             square.style.fontSize = 0 + 'px';
-            divHide.style.zIndex = 999;
             divLoose.style.display = 'block';
             countLooseGame++;
             looseGame.textContent = countLooseGame;
+
+            squaresTab.forEach((squareRow, indexFirst) => {
+                squareRow.forEach((square, indexSecond) => {
+            square.style.pointerEvents = 'none';
+                })
+            })
         }
 
         if(square.textContent == 0 && square.classList.contains('goodSquare')){
@@ -905,6 +932,12 @@ const bigFn = ()=> {
             divWin.style.display = 'block';
             countWinGame++;
             winGame.textContent = countWinGame;
+
+            squaresTab.forEach((squareRow, indexFirst) => {
+                squareRow.forEach((square, indexSecond) => {
+            square.style.pointerEvents = 'none';
+                })
+            })
         }
 
 

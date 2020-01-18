@@ -9,10 +9,8 @@ html{
 }
 
 div.chooseScreen{
-    position: absolute;
-    top:40px;
-    left:50%;
-    transform: translateX(-50%);
+text-align: center;
+margin:0 auto;
 }
 
 div.chooseScreen p{
@@ -43,50 +41,33 @@ div.container{
 }
 
 div.container.small{
-    position: absolute;
+    text-align: center;
     width: 200px;
     height: 200px;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     background-color: #ddd;
 }
 
 div.container.mid{
-    position: absolute;
+    text-align: center;
     width: 400px;
     height: 400px;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     background-color: #ddd;
 }
 
 div.container.big{
-    position: absolute;
     width: 600px;
     height: 600px;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    text-align: center;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     background-color: #ddd;
-}
-
-div.hide{
-    width:600px;
-    height: 600px;
-    position: absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    z-index: -1;
 }
 
 div.square{
@@ -98,12 +79,8 @@ div.square{
     text-align: center;
 }
 
-
-
-
 div.container div.goodSquare{
     background-color: rgb(0, 170, 0);
-    /* font-size:0px; */
 }
 
 div.container div.square.badSquare{
@@ -150,5 +127,9 @@ div.win{
 }
 
 div.results{
-    margin: 50px 0 0 200px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 50px;
 }
+
+
