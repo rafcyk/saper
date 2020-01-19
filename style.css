@@ -10,7 +10,7 @@ html{
 
 div.chooseScreen{
 text-align: center;
-margin:0 auto;
+margin:20px auto;
 }
 
 div.chooseScreen p{
@@ -133,3 +133,63 @@ div.results{
 }
 
 
+@media only screen and (max-width:700px){
+
+    div.chooseScreen p{
+        font-size: 20px;
+    }
+    
+    div.chooseScreen button{
+        font-size: 20px;
+    }
+    
+    div.chooseScreen label{
+        font-size: 15px;
+    }
+    
+    
+    div.container{
+        line-height: 10px;
+    }
+    
+    div.container.small{
+        width: 100px;
+        height: 100px;
+    }
+    
+    div.container.mid{
+        width: 200px;
+        height: 200px;
+    }
+    
+    div.container.big{
+        width: 300px;
+        height: 300px;
+    }
+    
+    div.square{
+        width:10px;
+        height: 10px;
+    }
+
+    
+    div.loose{
+        font-size:30px;
+        width: 300px;
+        height: 100px;
+        line-height: 100px;
+    }
+    
+    div.win{
+        font-size:30px;
+        width: 300px;
+        height: 100px;
+        line-height: 100px;
+    }
+    
+    div.results{
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+}

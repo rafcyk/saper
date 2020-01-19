@@ -269,7 +269,13 @@ const smallFn = ()=> {
             //after click you see number of badSquares around
     const dontHide = () => {
         
-        square.style.fontSize = 20 + 'px';
+        if(window.innerWidth < 700){
+            square.style.fontSize = 10 + 'px';
+            console.log('hello');
+        }
+        else{
+            square.style.fontSize = 20 + 'px';
+        }
         
         if(square.classList.contains('badSquare')){
             square.style.fontSize = 0 + 'px';
@@ -297,7 +303,13 @@ const smallFn = ()=> {
                             smallWin--;
                         }
                         square.id = "";
-                        square.style.fontSize = 20 + 'px';
+                        if(window.innerWidth < 700){
+                            square.style.fontSize = 5 + 'px';
+                            console.log('hello');
+                        }
+                        else{
+                            square.style.fontSize = 20 + 'px';
+                        }
                     }
     
                 })
@@ -577,7 +589,14 @@ const midlFn = ()=> {
             //after click you see number of badSquares around
     const dontHide = () => {
         
-        square.style.fontSize = 20 + 'px';
+        if(window.innerWidth < 700){
+            square.style.fontSize = 10 + 'px';
+            console.log('hello');
+        }
+        else{
+            square.style.fontSize = 20 + 'px';
+        }
+        
 
         if(square.id == "hide"){
             midWin--;
@@ -607,7 +626,14 @@ const midlFn = ()=> {
                         }
             
                         square.id = "";
-                        square.style.fontSize = 20 + 'px';
+
+                        if(window.innerWidth < 700){
+                            square.style.fontSize = 10 + 'px';
+                            console.log('hello');
+                        }
+                        else{
+                            square.style.fontSize = 20 + 'px';
+                        }
                     }
 
                     
@@ -896,7 +922,13 @@ const bigFn = ()=> {
             bigWin--;
         }
 
-        square.style.fontSize = 20 + 'px';
+        if(window.innerWidth < 700){
+            square.style.fontSize = 10 + 'px';
+            console.log('hello');
+        }
+        else{
+            square.style.fontSize = 20 + 'px';
+        }
         
         if(square.classList.contains('badSquare')){
             square.style.fontSize = 0 + 'px';
@@ -920,7 +952,13 @@ const bigFn = ()=> {
                             bigWin--;
                         }
                         square.id = "";
-                        square.style.fontSize = 20 + 'px';
+                        if(window.innerWidth < 700){
+                            square.style.fontSize = 10 + 'px';
+                            console.log('hello');
+                        }
+                        else{
+                            square.style.fontSize = 20 + 'px';
+                        }
                     }
     
                 })
