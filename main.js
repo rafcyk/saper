@@ -628,7 +628,7 @@ const midlFn = ()=> {
                         square.id = "";
 
                         if(window.innerWidth < 700){
-                            square.style.fontSize = 10 + 'px';
+                            square.style.fontSize = 15 + 'px';
                             console.log('hello');
                         }
                         else{
